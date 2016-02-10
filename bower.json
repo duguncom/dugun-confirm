@@ -1,0 +1,22 @@
+{
+  "name": "dugun-confirm",
+  "version": "0.0.0",
+  "description": "Show confirmation dialog before ngClick runs.",
+  "authors": [
+    "Ege Sertçetin"
+  ],
+  "homepage": "https://github.com/duguncom/dugun-confirm",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": ">=1.3"
+  },
+  "main": [
+    "dist/dugun-confirm.js"
+  ]
+}
