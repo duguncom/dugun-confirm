@@ -8,6 +8,7 @@ module.exports = function(config) {
             'bower_components/angular/angular.js',
             'bower_components/angular-mocks/angular-mocks.js',
             'src/dugun-confirm.module.js',
+            'src/confirm.service.js',
             'src/confirm.directive.js',
             'test/confirm.spec.js',
         ],

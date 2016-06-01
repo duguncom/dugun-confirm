@@ -1,11 +1,12 @@
 /**
  * @memberof dugun.confirm
  * @ngdoc directive
+ * @requires dugun.confirm:dgConfirm
  * @description
  * Displays window.confirm before ngClick, and if not confirmed, prevent
  * the statement from being called.
  */
-function DgConfirmDirective($window) {
+function DgConfirmDirective(dgConfirm) {
     return {
         priority: 1,
         restrict: 'A',
@@ -19,7 +20,7 @@ function DgConfirmDirective($window) {
                 $event.preventDefault();
 
                 if(angular.isUndefined(scope.dgConfirmIf) || scope.dgConfirmIf) {
-                    if($window.confirm(scope.dgConfirm)) {
+                    if(dgConfirm.confirm(scope.dgConfirm)) {
                         scope.ngClick();
                     }
                 } else {
@@ -32,7 +33,7 @@ function DgConfirmDirective($window) {
 }
 
 DgConfirmDirective.$inject = [
-    '$window',
+    'dgConfirm',
 ];
 
 angular.module('dugun.confirm')
